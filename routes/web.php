@@ -12,7 +12,7 @@ Route::post ('/book', [bookController::class,'store']);// guarda os dados (store
 
 //edit
 Route::get ('/book/edit/{book}', [bookController::class,'edit']); //cria book
-Route::post ('/book/{book}', [bookController::class,'update']);// guarda os dados (store)
+Route::post ('/book/update/{book}', [bookController::class,'update']);// guarda os dados (store)
 
 //apagar
 Route::get ('/book/destroy/{book}', [bookController::class,'destroy']);

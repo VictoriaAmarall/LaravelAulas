@@ -11,7 +11,7 @@ class BookController extends Controller
         return view('book.create');
     }
     public function store(Request $request){//cria um livro
-        book::create($request->all());
+        Book::create($request->all());
         return redirect ("/book");
     }
     public function index(){
@@ -19,6 +19,10 @@ class BookController extends Controller
         return view('book.index', compact('books'));
     } 
     public function edit(Book $book){
-        return view('book.edit', compact('books'));
+        return view('book.edit', compact('book'));
+    } 
+    public function update(Book $book, Request $request){
+        $book->update($request->all());
+        return redirect("/book");
     } 
 }
