@@ -1,18 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BookController;
+use App\Http\Controllers\PilotController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get ('/book', [bookController::class,'index']); //lista book
-Route::get ('/book/create', [bookController::class,'create']); //cria book
-Route::post ('/book', [bookController::class,'store']);// guarda os dados (store)
+Route::get ('/pilot', [pilotController::class,'index']); //lista pilot
+Route::get ('/pilot/create', [pilotController::class,'create']); //cria pilot
+Route::post ('/pilot', [pilotController::class,'store']);// guarda os dados (store)
 
 //edit
-Route::get ('/book/edit/{book}', [bookController::class,'edit']); //cria book
-Route::post ('/book/update/{book}', [bookController::class,'update']);// guarda os dados (store)
+Route::get ('/pilot/edit/{pilot}', [pilotController::class,'edit']); //cria pilot
+Route::post ('/pilot/update/{pilot}', [pilotController::class,'update']);// guarda os dados (store)
 
 //apagar
-Route::get ('/book/destroy/{book}', [bookController::class,'destroy']);
+Route::get ('/pilot/destroy/{pilot}', [pilotController::class,'destroy']);
