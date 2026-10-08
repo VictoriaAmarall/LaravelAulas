@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->interger('age');
+            $table->integer('age');
             $table->string('car');
             $table->string('team');
             $table->string('gender');
